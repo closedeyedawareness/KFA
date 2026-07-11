@@ -1,0 +1,531 @@
+/* ============================================================
+   Keys From Above — styles.css
+   Palette + type lifted from the original Canva site (see site-audit.md).
+   Layout is a hand-written responsive rebuild, not a port of Canva's
+   absolute-positioned 1920x768 canvas.
+   ============================================================ */
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Colour */
+  --c-black:        #000000;
+  --c-hero-bg:      #080804;
+  --c-about-bg:     #141311;
+  --c-surface:      #0f1015;
+  --c-purple:       #9805ff;   /* brand neon accent */
+  --c-lavender:     #e1bffe;   /* pill buttons */
+  --c-cream:        #faf2e9;   /* body copy */
+  --c-white:        #ffffff;
+  --c-scrim:        rgba(19, 22, 32, 0.60);
+
+  /* Type */
+  --f-body:    "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --f-display: "Archivo", "Quicksand", Helvetica, Arial, sans-serif;   /* sub for Agrandir Wide */
+  --f-script:  "Parisienne", "Brush Script MT", cursive;                /* sub for Amsterdam One */
+
+  /* Rhythm */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2.5rem;
+  --sp-5: 4rem;
+  --sp-6: 6rem;
+
+  --measure: 62ch;
+  --radius:  999px;
+  --wrap:    1280px;
+
+  --glow: 0 0 6px rgba(152, 5, 255, .55), 0 0 18px rgba(152, 5, 255, .35);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--c-black);
+  color: var(--c-cream);
+  font-family: var(--f-body);
+  font-size: 1.0625rem;      /* ~17px, orig body was 18–19px at 1920 */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video, iframe, svg { display: block; max-width: 100%; }
+img, video { height: auto; }
+ul { list-style: none; margin: 0; padding: 0; }
+p  { margin: 0 0 1.15em; }
+
+a { color: var(--c-lavender); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--c-white); }
+
+:focus-visible {
+  outline: 2px solid var(--c-lavender);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--c-lavender); color: #1a1030;
+  padding: .6rem 1rem; font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+/* Old Canva #page-N deep links still resolve. */
+.anchor-alias { position: absolute; top: -80px; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(0, 0, 0, .92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+.nav nav {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: .7rem 1.25rem;
+  display: flex; align-items: center; gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+.nav__brand {
+  font-weight: 700; font-size: .95rem; letter-spacing: .02em;
+  color: var(--c-white); text-decoration: none; margin-right: auto;
+}
+.nav__brand:hover { color: var(--c-lavender); }
+.nav__list { display: flex; gap: var(--sp-3); flex-wrap: wrap; }
+.nav__list a {
+  font-weight: 700; font-size: .9rem;
+  color: var(--c-white); text-decoration: none;
+  padding: .25rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav__list a:hover,
+.nav__list a:focus-visible { color: var(--c-lavender); border-bottom-color: var(--c-purple); }
+
+/* ---------- Section shell ---------- */
+.section {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: flex; align-items: center;
+  padding: var(--sp-6) 1.25rem;
+  overflow: hidden;
+}
+
+/* Background image / video layer */
+.section__bg,
+.section__media {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Readability scrim over photography */
+.section__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, .88) 0%,
+    rgba(0, 0, 0, .72) 45%,
+    rgba(0, 0, 0, .35) 75%,
+    rgba(0, 0, 0, .55) 100%
+  );
+}
+
+.section__inner { width: 100%; max-width: var(--wrap); margin: 0 auto; }
+
+/* Per-section backgrounds — swap these paths, not the HTML. */
+.section--hero        { background: var(--c-hero-bg); }
+.section--about       { background: var(--c-about-bg); }
+.section--about .section__bg       { background-image: url("../assets/img/bg-about.png"); }
+.section--portfolio   { background: var(--c-black); }
+.section--portfolio .section__bg   { background-image: url("../assets/img/bg-portfolio.jpg"); }
+.section--playlists   { background: var(--c-black); }
+.section--contact     { background: var(--c-black); }
+.section--meditations { background: var(--c-black); }
+.section--meditations .section__bg { background-image: url("../assets/img/bg-meditations.jpg"); }
+.section--meditations .section__scrim {
+  background: linear-gradient(to right, rgba(0,0,0,.9) 0%, rgba(0,0,0,.7) 50%, rgba(0,0,0,.35) 100%);
+}
+
+/* ---------- Two-column layout (copy left, neon heading + pills right) ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: var(--sp-5);
+  align-items: center;
+}
+.grid__aside { display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-3); }
+
+.stack { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+/* ---------- Hero ---------- */
+.hero__inner { text-align: left; max-width: 44rem; }
+.hero__title {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 118;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 1.05;
+  margin: 0 0 var(--sp-2);
+  color: var(--c-white);
+  text-shadow: var(--glow);
+}
+.hero__tagline {
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem);
+  color: var(--c-cream);
+  margin-bottom: var(--sp-1);
+}
+.hero__roles {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 112;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  /* Not --c-purple: #9805ff on near-black fails contrast badly. Lavender text
+     with a purple glow reads as the same brand colour but is actually legible. */
+  color: var(--c-lavender);
+  text-shadow: 0 0 8px rgba(152, 5, 255, .9), 0 0 20px rgba(152, 5, 255, .5);
+  margin-bottom: var(--sp-4);
+}
+.section--hero .section__scrim {
+  background: linear-gradient(to right, rgba(0,0,0,.85) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.25) 100%);
+}
+
+.scroll-cue {
+  position: absolute; left: 50%; bottom: 2rem; transform: translateX(-50%);
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: var(--c-lavender); text-decoration: none;
+  border: 1px solid rgba(225, 191, 254, .5);
+  animation: bob 2.4s ease-in-out infinite;
+}
+@keyframes bob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 7px); } }
+
+/* ---------- Neon script headings ----------
+   On the original these are LIVE TEXT (Amsterdam One + a glow), not images.
+   Reproduced here as real text so they stay crisp, scale, and are readable
+   by search engines and screen readers. */
+.neon {
+  margin: 0;
+  font-family: var(--f-script);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.1;
+  color: #f3e4ff;
+  text-shadow:
+    0 0 4px  #fff,
+    0 0 11px var(--c-lavender),
+    0 0 22px var(--c-purple),
+    0 0 42px var(--c-purple),
+    0 0 80px rgba(152, 5, 255, .6);
+  padding: .1em .05em .2em;
+}
+.neon--left { font-size: clamp(2.6rem, 7vw, 5.6rem); }
+
+/* ---------- Copy panel over photography ---------- */
+.panel {
+  background: linear-gradient(rgba(0,0,0,0), var(--c-scrim) 65%, var(--c-scrim));
+  background-color: rgba(8, 8, 12, .55);
+  border-radius: 10px;
+  padding: var(--sp-4);
+  max-width: var(--measure);
+}
+.lead { font-weight: 700; color: var(--c-white); }
+.brand-line {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 118;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--c-white);
+  margin-bottom: .2em;
+}
+.signature {
+  font-family: var(--f-script);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--c-cream);
+  margin: var(--sp-3) 0 0;
+  line-height: 1.2;
+}
+
+/* ---------- Pill buttons ---------- */
+.pills { display: flex; flex-direction: column; gap: .6rem; }
+.pills--row { flex-direction: row; flex-wrap: wrap; gap: .75rem; }
+
+.pill {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: var(--c-lavender);
+  color: #1a1030;
+  font-weight: 700; font-size: .92rem;
+  text-decoration: none;
+  padding: .5rem 1.1rem .5rem .5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 0 12px rgba(225, 191, 254, .25);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.pill__icon {
+  width: 26px; height: 26px; flex: 0 0 26px;
+  display: grid; place-items: center;
+  background: var(--c-white);
+  color: var(--c-purple);
+  border-radius: 50%;
+  font-size: .95rem;
+}
+.pill:hover,
+.pill:focus-visible {
+  background: var(--c-white);
+  color: #1a1030;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(225, 191, 254, .5);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--c-purple);
+  color: var(--c-white);
+  font-weight: 700;
+  text-decoration: none;
+  padding: .8rem 1.6rem;
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover, .btn:focus-visible {
+  color: var(--c-white);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(152,5,255,.8), 0 0 28px rgba(152,5,255,.5);
+}
+
+.text-link { color: var(--c-lavender); font-weight: 600; }
+
+/* ---------- Cards (portfolio) ---------- */
+.card {
+  background: rgba(8, 8, 12, .62);
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 10px;
+  padding: var(--sp-3) var(--sp-4);
+  margin-bottom: var(--sp-3);
+  max-width: 34rem;
+}
+.card__title {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 118;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--c-white);
+  margin: 0 0 var(--sp-2);
+}
+.card__footnote { margin: 0; }
+
+.releases { display: grid; gap: .45rem; }
+.releases a {
+  color: var(--c-cream);
+  text-decoration: underline;
+  text-decoration-color: rgba(152, 5, 255, .6);
+}
+.releases a:hover { color: var(--c-lavender); text-decoration-color: var(--c-lavender); }
+
+.card--media { display: flex; gap: var(--sp-4); flex-wrap: wrap; }
+.media-item { text-align: center; }
+.thumb { position: relative; display: inline-block; }
+.thumb img { border-radius: 6px; }
+.thumb__play {
+  position: absolute; inset: 0; margin: auto;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(0, 0, 0, .6);
+  color: var(--c-white); font-size: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+.thumb:hover .thumb__play { background: var(--c-purple); }
+.thumb--doc img { filter: drop-shadow(0 0 8px rgba(152,5,255,.35)); }
+
+/* ---------- Playlists ---------- */
+.playlists {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: var(--sp-5);
+  align-items: start;
+}
+.playlists__copy { max-width: var(--measure); }
+.playlists__embeds { display: grid; gap: var(--sp-3); }
+
+.embed__title {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 115;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--c-purple);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: 0 0 .5rem;
+  text-shadow: var(--glow);
+}
+.embed--spotify iframe {
+  border: 0;
+  border-radius: 12px;
+  width: 100%;
+  min-height: 352px;
+}
+
+/* ---------- Contact ---------- */
+.form-wrap {
+  width: 100%;
+  max-width: 680px;
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(225, 191, 254, .18);
+  border-radius: 12px;
+  padding: .5rem;
+}
+#jotform {
+  width: 100%;
+  min-height: 640px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ---------- Meditations ---------- */
+/* Ring logo.
+   Canva never exported this as one file — on the original it's three stacked
+   layers, so we stack them the same way: wings behind, key-ring on top of
+   those, halo above.
+
+   Note: the source logo-keyring PNG is a 2400x800 SPRITE (three 800x800
+   frames). fetch-assets.sh crops it down to the single frame we want, so by
+   the time it lands in assets/ it's a plain square image. If the logo ever
+   renders as three overlapping circles, the crop step didn't run — check that
+   ffmpeg or ImageMagick was installed when you ran the script. */
+.ring-logo {
+  position: relative;
+  width: 200px; height: 200px;
+  margin-bottom: var(--sp-3);
+  filter: drop-shadow(0 0 14px rgba(152, 5, 255, .45));
+}
+.ring-logo img { position: absolute; }
+.ring-logo__wings {
+  width: 200px; height: auto;
+  top: 52%; left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .95;
+  z-index: 0;
+}
+.ring-logo__keyring {
+  width: 124px; height: 124px;
+  top: 52%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.ring-logo__halo {
+  width: 96px; height: auto;
+  top: 6%; left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.section--meditations .pills--row { margin-top: var(--sp-3); }
+
+/* ---------- Next-section dot ---------- */
+.next-dot {
+  position: absolute; right: 2rem; bottom: 2rem;
+  width: 54px; height: 54px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--c-lavender);
+  color: #1a1030; font-size: 1.2rem; text-decoration: none;
+  box-shadow: 0 0 18px rgba(225, 191, 254, .35);
+  transition: transform .18s ease;
+}
+.next-dot:hover { transform: translateY(-3px); color: #1a1030; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--c-black);
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding: var(--sp-4) 1.25rem;
+}
+.footer__inner {
+  max-width: var(--wrap); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--sp-3); flex-wrap: wrap;
+}
+.footer__brand {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 118;
+  font-weight: 700;
+  color: var(--c-white);
+  margin: 0;
+}
+.social { display: flex; gap: var(--sp-2); }
+.social a {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: var(--c-lavender);
+  border: 1px solid rgba(225, 191, 254, .3);
+}
+.social a:hover { color: var(--c-white); background: var(--c-purple); border-color: var(--c-purple); }
+.footer__legal { margin: 0; font-size: .85rem; color: rgba(250, 242, 233, .6); }
+
+/* ============================================================
+   Responsive — the original Canva site had no real mobile layout.
+   ============================================================ */
+@media (max-width: 900px) {
+  .grid,
+  .playlists { grid-template-columns: 1fr; gap: var(--sp-4); }
+
+  .grid { display: flex; flex-direction: column-reverse; align-items: stretch; }
+  .grid__aside { align-items: center; text-align: center; }
+  .grid__aside .pills { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+
+  .neon img,
+  .neon--left img { width: min(320px, 78vw); }
+
+  .section { min-height: auto; padding: var(--sp-5) 1.25rem; }
+  .section__scrim {
+    background: linear-gradient(to bottom, rgba(0,0,0,.82), rgba(0,0,0,.9));
+  }
+  .section--meditations .section__scrim {
+    background: linear-gradient(to bottom, rgba(0,0,0,.78), rgba(0,0,0,.92));
+  }
+
+  .panel { padding: var(--sp-3); max-width: none; }
+  .card  { max-width: none; }
+  .card--media { justify-content: space-around; }
+
+  .next-dot, .scroll-cue { display: none; }
+
+  .ring-logo { margin-inline: auto; }
+  .section--meditations .pills--row { justify-content: center; }
+
+  .footer__inner { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+
+  .nav nav { padding: .6rem .9rem; gap: .6rem; }
+  .nav__brand { font-size: .85rem; width: 100%; margin-right: 0; }
+  .nav__list { gap: .9rem; width: 100%; }
+  .nav__list a { font-size: .8rem; }
+
+  .hero__inner { text-align: center; margin-inline: auto; }
+  .hero__title { font-size: clamp(2.2rem, 11vw, 3rem); }
+  .pills--row { justify-content: center; }
+
+  .neon { font-size: clamp(2.6rem, 12vw, 3.6rem); }
+  .neon--left { font-size: clamp(2.4rem, 12vw, 3.6rem); }
+
+  .section { padding: var(--sp-4) 1rem; }
+  .panel, .card { padding: 1.1rem; }
+  .card--media { gap: var(--sp-3); }
+
+  .form-wrap { padding: 0; border: 0; background: none; }
+}
