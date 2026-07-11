@@ -1,0 +1,1055 @@
+{
+  "$comment": [
+    "Maps the original Canva content-hashed filenames to readable paths.",
+    "SOURCE OF TRUTH for scripts/fetch-assets.sh - edit this file, then re-run the script.",
+    "",
+    "Every entry below was VERIFIED by rendering the asset from the live CDN in a browser",
+    "and looking at it. This is no longer guesswork.",
+    "",
+    "KEY FINDING: the neon script headings ('About me', 'Mediakit', 'Playlist Placement',",
+    "'Get in Touch', 'Meditations') are NOT images. They are live text set in Amsterdam One",
+    "with a CSS glow. The rebuild renders them as real <h2> text - no asset needed.",
+    "",
+    "WATCH OUT: several Canva PNGs are SPRITE SHEETS with multiple frames side by side. logo-keyring is 2400x800 = 3 frames. If an image renders as repeated copies of itself, that is why - crop it."
+  ],
+  "base_url": "https://keysfromabove.com/_assets/",
+  "warning": "Only fetchable while the original Canva site is still live. Run scripts/fetch-assets.sh BEFORE taking it down.",
+  "total": 115,
+  "assets": [
+    {
+      "source": "images/9b3beb651c6ba9d1853c9c19ee842e45.jpg",
+      "target": "assets/img/og-image.jpg",
+      "describes": "Open Graph share image - neon-lit grand piano",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "From the og:image meta tag; confirmed visually."
+    },
+    {
+      "source": "images/2d0b56e7e51cf11036ad8734bdb67e2d.png",
+      "target": "assets/icons/_canva-favicon.png",
+      "describes": "Canva's own 'C' logo",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "This is the site's current favicon. It is CANVA'S LOGO, not a Keys From Above mark - the original never set a custom one. See README."
+    },
+    {
+      "source": "images/e53c4bd8da5e491d9ab09e7cf0daf874.png",
+      "target": "assets/icons/_canva-favicon-2.png",
+      "describes": "Canva's own 'C' logo",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Same as above."
+    },
+    {
+      "source": "images/725b756a69a7d4c235070e51acd85560.png",
+      "target": "assets/icons/_canva-favicon-3.png",
+      "describes": "Canva's own 'C' logo",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Same as above."
+    },
+    {
+      "source": "video/8a03853320d29832df637c7a1100be67.mp4",
+      "target": "assets/video/hero.mp4",
+      "describes": "Hero background video - neon pink grand piano being played",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed: its poster frame is the neon piano seen in the hero."
+    },
+    {
+      "source": "video/37aa745cc8c80a1f41811e04b88da00f.jpg",
+      "target": "assets/video/hero-poster.jpg",
+      "describes": "Hero video poster frame",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually - neon pink grand piano."
+    },
+    {
+      "source": "media/38c6750832064bb1580a302329007f06.png",
+      "target": "assets/_archive/media-38c6750832064bb1580a302329007f06.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/055dfa8a7e0dabbd51b39ae4626f1fd0.png",
+      "target": "assets/_archive/media-055dfa8a7e0dabbd51b39ae4626f1fd0.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/0a11c5b2eff14c1de27f41eec4b3e476.png",
+      "target": "assets/img/logo-wings.png",
+      "describes": "Logo layer 3/3: angel wings",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually. Single image (not a sprite): 800x432 / 800x413."
+    },
+    {
+      "source": "media/48851c199038d1e7d464beb48bf9844f.png",
+      "target": "assets/_archive/media-48851c199038d1e7d464beb48bf9844f.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/77a3110de314e465a3b34021b7971ddf.jpg",
+      "target": "assets/img/bg-portfolio.jpg",
+      "describes": "Portfolio background - hooded figure at a keyboard, dusk lake",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually."
+    },
+    {
+      "source": "video/1bb54e58e60d500424db8da8d9fe04c5.jpg",
+      "target": "assets/img/interview-thumb.jpg",
+      "describes": "'Stars of Sound' podcast thumbnail (Interview link)",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually - the podcast artwork with headphones."
+    },
+    {
+      "source": "media/0cc4752305415d9347c2d9e86c82da5e.png",
+      "target": "assets/_archive/media-0cc4752305415d9347c2d9e86c82da5e.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/604ca57c9bf707b4fe3d1fbccde0be45.jpg",
+      "target": "assets/_archive/media-604ca57c9bf707b4fe3d1fbccde0be45.jpg",
+      "describes": "Static screenshot of a Spotify playlist card - DROPPED",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "One of three static Spotify card screenshots on the original. All three are dropped: the two featured playlists are now live iframe embeds, and the third playlist is deliberately not featured. Archived only; nothing references it."
+    },
+    {
+      "source": "media/0ac904ad60ee10c4f6ea91813a832a5e.png",
+      "target": "assets/_archive/media-0ac904ad60ee10c4f6ea91813a832a5e.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/1ef1efb0d542ef81abe8f7858d42db0f.png",
+      "target": "assets/_archive/media-1ef1efb0d542ef81abe8f7858d42db0f.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/ca74d469ad437dabfb9fa6c2bceb245a.png",
+      "target": "assets/_archive/media-ca74d469ad437dabfb9fa6c2bceb245a.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/1014d8131b7f8b5584323ccc6d58f188.png",
+      "target": "assets/_archive/media-1014d8131b7f8b5584323ccc6d58f188.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/c5c933d244cfba45864d7f6893151749.png",
+      "target": "assets/_archive/media-c5c933d244cfba45864d7f6893151749.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/c1b142321e85115f97cf3b6848d42c0c.png",
+      "target": "assets/_archive/media-c1b142321e85115f97cf3b6848d42c0c.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/b32781384ab83a36757b33e25f86136f.svg",
+      "target": "assets/icons/tiktok.svg",
+      "describes": "TikTok logo",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Confirmed visually. NOTE: no TikTok link was found in the live DOM - asset is unused. See README."
+    },
+    {
+      "source": "media/9d312a584e79b22497048275669c0340.png",
+      "target": "assets/_archive/media-9d312a584e79b22497048275669c0340.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/8861ba38122ab81c9e8ea386b067149a.png",
+      "target": "assets/_archive/media-8861ba38122ab81c9e8ea386b067149a.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e718d2ae9ae4c59ee11d70ca0263b71f.png",
+      "target": "assets/_archive/media-e718d2ae9ae4c59ee11d70ca0263b71f.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/722d9caf009f5d294105a8989d4a7e78.png",
+      "target": "assets/_archive/media-722d9caf009f5d294105a8989d4a7e78.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/21d4176c62828db075560e28afcebaba.png",
+      "target": "assets/_archive/media-21d4176c62828db075560e28afcebaba.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/af38d3fe59861759b0705f7de3338303.png",
+      "target": "assets/_archive/media-af38d3fe59861759b0705f7de3338303.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/6165050bc1aad736487da7ba10f33fc7.png",
+      "target": "assets/_archive/media-6165050bc1aad736487da7ba10f33fc7.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/d606b63d598ec8af626529997ec4a624.svg",
+      "target": "assets/icons/facebook.svg",
+      "describes": "Facebook logo",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Confirmed visually."
+    },
+    {
+      "source": "media/76fbfc4c2c517699e43c915827334d31.png",
+      "target": "assets/_archive/media-76fbfc4c2c517699e43c915827334d31.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/11f125fe0097e76a6e568d83c7df278d.png",
+      "target": "assets/_archive/media-11f125fe0097e76a6e568d83c7df278d.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e903f7900e04a6e9ed8322c11d9ac21f.png",
+      "target": "assets/_archive/media-e903f7900e04a6e9ed8322c11d9ac21f.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/8e5d6abda89d9ba7d4c7cd9f6e0fc6db.png",
+      "target": "assets/_archive/media-8e5d6abda89d9ba7d4c7cd9f6e0fc6db.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/fd5c77c2cbba02ba80883b39bb9ebe3c.png",
+      "target": "assets/_archive/media-fd5c77c2cbba02ba80883b39bb9ebe3c.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/7d2eeedce2a2cc00e57e598ce829a612.png",
+      "target": "assets/_archive/media-7d2eeedce2a2cc00e57e598ce829a612.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/dfc8f023a668f7c7de482ce1d5e8bdc5.png",
+      "target": "assets/_archive/media-dfc8f023a668f7c7de482ce1d5e8bdc5.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/86ad090ed2557bc7b0ad1b3e7b8b2632.png",
+      "target": "assets/_archive/media-86ad090ed2557bc7b0ad1b3e7b8b2632.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/40de6676df6dd7846bb3756ee3049211.png",
+      "target": "assets/img/insight-timer-wordmark.png",
+      "describes": "Insight Timer wordmark",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Confirmed visually. Unused by the rebuild (the meditations are text links)."
+    },
+    {
+      "source": "media/02fc1638426ab2ab0e5c030c0b985e73.png",
+      "target": "assets/_archive/media-02fc1638426ab2ab0e5c030c0b985e73.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e73eab4056101c96cbc0393a608f425f.png",
+      "target": "assets/_archive/media-e73eab4056101c96cbc0393a608f425f.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/4cdca5292880205d62cc5bff733c2e96.png",
+      "target": "assets/_archive/media-4cdca5292880205d62cc5bff733c2e96.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/8b7c5dde7780a6a999f4b2bc98f2f59d.jpg",
+      "target": "assets/_archive/media-8b7c5dde7780a6a999f4b2bc98f2f59d.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/1c5c2cf1133e7758172dabd3a9f972e0.jpg",
+      "target": "assets/_archive/media-1c5c2cf1133e7758172dabd3a9f972e0.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/0ac3c80742fe5924049532b661eae168.jpg",
+      "target": "assets/_archive/media-0ac3c80742fe5924049532b661eae168.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/6e09538478d4a8f1b71b2bd7cb9c13d0.png",
+      "target": "assets/img/bio-icon.png",
+      "describes": "Line-art 'BIO' document icon (Biography link)",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually."
+    },
+    {
+      "source": "media/2011b4a573dd5047da555f18b6dbbdad.png",
+      "target": "assets/_archive/media-2011b4a573dd5047da555f18b6dbbdad.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/828d7310b684ee703201f560721ad756.png",
+      "target": "assets/_archive/media-828d7310b684ee703201f560721ad756.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/c1ef19bb8c8e73177ec50162ce57d474.png",
+      "target": "assets/img/bg-about.png",
+      "describes": "About background - Adelmar in a dark suit at a grand piano, library",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually."
+    },
+    {
+      "source": "media/593eadf2841889a142e9cc90fccb2970.png",
+      "target": "assets/_archive/media-593eadf2841889a142e9cc90fccb2970.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/72c76f094a6157cba1a026fec338597e.png",
+      "target": "assets/_archive/media-72c76f094a6157cba1a026fec338597e.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/5fe16602d205ab98aec9decb3fb0faba.png",
+      "target": "assets/_archive/media-5fe16602d205ab98aec9decb3fb0faba.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/fc483433541993f5a7eb68cc67cc3cc1.png",
+      "target": "assets/_archive/media-fc483433541993f5a7eb68cc67cc3cc1.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e64efe59b7d9dc8a84e96ede58a19ba9.png",
+      "target": "assets/_archive/media-e64efe59b7d9dc8a84e96ede58a19ba9.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/09c1b7da2b2528c81a9f0aedf774ac6a.png",
+      "target": "assets/_archive/media-09c1b7da2b2528c81a9f0aedf774ac6a.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/198b2ce7c00b73c3d7a41dc766890349.png",
+      "target": "assets/_archive/media-198b2ce7c00b73c3d7a41dc766890349.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/fe2728eeef3b1d14d2625bf72eccf340.png",
+      "target": "assets/_archive/media-fe2728eeef3b1d14d2625bf72eccf340.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/fc4720aec22dd55e7a08bf86c724c355.png",
+      "target": "assets/_archive/media-fc4720aec22dd55e7a08bf86c724c355.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/303467e449bdd624ea0396fde2f26cd0.png",
+      "target": "assets/_archive/media-303467e449bdd624ea0396fde2f26cd0.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/cdcbe73ce00a87385b1ee40b5d9878cb.png",
+      "target": "assets/_archive/media-cdcbe73ce00a87385b1ee40b5d9878cb.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/887446538df3e8e01baf3a8c716327b4.svg",
+      "target": "assets/icons/instagram.svg",
+      "describes": "Instagram logo",
+      "confidence": "verified",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Confirmed visually. NOTE: no Instagram link was found in the live DOM - asset is unused. See README."
+    },
+    {
+      "source": "media/c7c39f785d1d4add13618bf99e15484f.png",
+      "target": "assets/_archive/media-c7c39f785d1d4add13618bf99e15484f.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/25a08eeac75a247324e61640e012a006.png",
+      "target": "assets/_archive/media-25a08eeac75a247324e61640e012a006.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/27aa4603f7c1ae944020ddca17bcb853.png",
+      "target": "assets/_archive/media-27aa4603f7c1ae944020ddca17bcb853.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/d48f7b31edc3ddb868fa8b366bd1136e.png",
+      "target": "assets/_archive/media-d48f7b31edc3ddb868fa8b366bd1136e.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/87c28eb46c51d9af812712be0e28a7ce.png",
+      "target": "assets/_archive/media-87c28eb46c51d9af812712be0e28a7ce.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/7623f60d3893db03e5a3ec7f38764dbd.png",
+      "target": "assets/_archive/media-7623f60d3893db03e5a3ec7f38764dbd.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/bd63b716c9c70924e379d7d91c98f2e6.jpg",
+      "target": "assets/_archive/media-bd63b716c9c70924e379d7d91c98f2e6.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/fb800a7db9c6da3aa9774a235b448dd1.jpg",
+      "target": "assets/_archive/media-fb800a7db9c6da3aa9774a235b448dd1.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e6bee40fa201b38af9c9f871b83d102d.png",
+      "target": "assets/img/logo-halo.png",
+      "describes": "Logo layer 2/3: purple halo",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually. Single image (not a sprite): 800x432 / 800x413."
+    },
+    {
+      "source": "media/223bf804f0f0e1ae6079fd39a31bfdc7.png",
+      "target": "assets/_archive/media-223bf804f0f0e1ae6079fd39a31bfdc7.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/7b789a7cc464b597c3d7f8e9370b61f7.png",
+      "target": "assets/_archive/media-7b789a7cc464b597c3d7f8e9370b61f7.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/34c03064a11dfc8baef8b903d0498223.png",
+      "target": "assets/img/logo-keyring.png",
+      "describes": "Logo layer 2/3: circular piano-key ring (2400x800 SPRITE - three 800x800 frames)",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually. This file is a SPRITE SHEET, not a single image: frame 0 = plain white disc, frame 1 = key-ring on white, frame 2 = key-ring on transparent centre. fetch-assets.sh crops it to frame 2. Requires ImageMagick or ffmpeg."
+    },
+    {
+      "source": "media/21d29a254a86974ec765e4dd09eb59d0.png",
+      "target": "assets/_archive/media-21d29a254a86974ec765e4dd09eb59d0.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/1c943528471c41cbe6c2be707e7cdc15.png",
+      "target": "assets/_archive/media-1c943528471c41cbe6c2be707e7cdc15.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/8b1916283c76ac8a5534154cd720c298.png",
+      "target": "assets/_archive/media-8b1916283c76ac8a5534154cd720c298.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/320214c227e7da8b5fc13f1567a7d16a.png",
+      "target": "assets/_archive/media-320214c227e7da8b5fc13f1567a7d16a.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/b8ccb3ff0398227f862a53cda1d07484.png",
+      "target": "assets/_archive/media-b8ccb3ff0398227f862a53cda1d07484.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e4313b8da1583ecadc00f6afb55f8a2c.png",
+      "target": "assets/_archive/media-e4313b8da1583ecadc00f6afb55f8a2c.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/784f8d95cfb62ef4b42cef6ab761845e.png",
+      "target": "assets/_archive/media-784f8d95cfb62ef4b42cef6ab761845e.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/ff832b478883e59a1eb2d2aff330f667.png",
+      "target": "assets/_archive/media-ff832b478883e59a1eb2d2aff330f667.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/0cdd87bd7a8ab124164ff1b251a11b51.png",
+      "target": "assets/_archive/media-0cdd87bd7a8ab124164ff1b251a11b51.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/7ec652824f9d43537c71976963629885.png",
+      "target": "assets/_archive/media-7ec652824f9d43537c71976963629885.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/8d9351149348f4681ac51937eeea7c08.jpg",
+      "target": "assets/_archive/media-8d9351149348f4681ac51937eeea7c08.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/843fdbf09d1b856c472424d52d624d3a.jpg",
+      "target": "assets/_archive/media-843fdbf09d1b856c472424d52d624d3a.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/5ee3e682eb6f9d94557d6d623bf66b74.png",
+      "target": "assets/_archive/media-5ee3e682eb6f9d94557d6d623bf66b74.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/ad3c642520dae8ca0d37dd7c166ad213.png",
+      "target": "assets/_archive/media-ad3c642520dae8ca0d37dd7c166ad213.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/e3d4adc661153c955eac5ae2839a239b.png",
+      "target": "assets/_archive/media-e3d4adc661153c955eac5ae2839a239b.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/5012767313e0463789c42272fdb8b5a3.png",
+      "target": "assets/_archive/media-5012767313e0463789c42272fdb8b5a3.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/9b84e6b65692bbc0b283e8ff94b06e8d.png",
+      "target": "assets/_archive/media-9b84e6b65692bbc0b283e8ff94b06e8d.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "media/c0cdab6a5f1de9399d44992147ad65dc.png",
+      "target": "assets/_archive/media-c0cdab6a5f1de9399d44992147ad65dc.png",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/ed16c6a51b420eab609be9c124360dee.mp4",
+      "target": "assets/_archive/video-ed16c6a51b420eab609be9c124360dee.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/495685d22541457f3eb304879c31ad77.mp4",
+      "target": "assets/_archive/video-495685d22541457f3eb304879c31ad77.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/b9c459af7a2f00230eaa2094c9e4daa8.mp4",
+      "target": "assets/_archive/video-b9c459af7a2f00230eaa2094c9e4daa8.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/a85f67b82799f3ef1371aba76b040489.mp4",
+      "target": "assets/_archive/video-a85f67b82799f3ef1371aba76b040489.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/2b25573247a6c44b67b2dcdadaa474be.jpg",
+      "target": "assets/_archive/video-2b25573247a6c44b67b2dcdadaa474be.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/546f4db060430112f93044cb4be82ee9.mp4",
+      "target": "assets/_archive/video-546f4db060430112f93044cb4be82ee9.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/c6f7a98604129edde53737c45b7e9b64.mp4",
+      "target": "assets/_archive/video-c6f7a98604129edde53737c45b7e9b64.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/91c240a517c4d2319252bfccdba1c9d5.mp4",
+      "target": "assets/_archive/video-91c240a517c4d2319252bfccdba1c9d5.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/1ab9bd023c991ac0d700250f2a74306c.mp4",
+      "target": "assets/_archive/video-1ab9bd023c991ac0d700250f2a74306c.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/bc28a530fd613c3e0128239f15d5f306.mp4",
+      "target": "assets/_archive/video-bc28a530fd613c3e0128239f15d5f306.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/95c08bfa990fe1e33b79234861b62dd1.jpg",
+      "target": "assets/img/bg-meditations.jpg",
+      "describes": "Meditations background - meditating silhouette, magenta neon swirl",
+      "confidence": "verified",
+      "used_by_site": true,
+      "needs_review": false,
+      "note": "Confirmed visually. On the original this was a looping video; the rebuild uses this still frame instead (see README)."
+    },
+    {
+      "source": "video/af5e33c49b16f0bc0827a9476d00c99d.jpg",
+      "target": "assets/_archive/video-af5e33c49b16f0bc0827a9476d00c99d.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/bed3c7a25b856217d97140f9e7a1ea10.mp4",
+      "target": "assets/_archive/video-bed3c7a25b856217d97140f9e7a1ea10.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/07cfa5d5651a266e8f2819b14ea3c97c.mp4",
+      "target": "assets/_archive/video-07cfa5d5651a266e8f2819b14ea3c97c.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/63041fc012f8ef8f1a1e7cc8152fdcac.mp4",
+      "target": "assets/_archive/video-63041fc012f8ef8f1a1e7cc8152fdcac.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/8773107b37be915064518203c95479bd.mp4",
+      "target": "assets/_archive/video-8773107b37be915064518203c95479bd.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/753c141eca60913f6e567624042623a2.mp4",
+      "target": "assets/_archive/video-753c141eca60913f6e567624042623a2.mp4",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/7fc1c846e68b18a9be13a8642714e8bf.jpg",
+      "target": "assets/_archive/video-7fc1c846e68b18a9be13a8642714e8bf.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/35b68b27eebc0fa7932a6636bb0ff948.jpg",
+      "target": "assets/_archive/video-35b68b27eebc0fa7932a6636bb0ff948.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/9451776b3c335d81b4e2585d07eb382c.jpg",
+      "target": "assets/_archive/video-9451776b3c335d81b4e2585d07eb382c.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/0b228b2b45ad9d928922ab57419035a8.jpg",
+      "target": "assets/_archive/video-0b228b2b45ad9d928922ab57419035a8.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/1fe53682b51b47334a931dc9090e0854.jpg",
+      "target": "assets/_archive/video-1fe53682b51b47334a931dc9090e0854.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/cc96fd6c8ace13f3137aa710c98e0e4e.jpg",
+      "target": "assets/_archive/video-cc96fd6c8ace13f3137aa710c98e0e4e.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/3a86feca3b0908c7313c8aefc2dbfd05.jpg",
+      "target": "assets/_archive/video-3a86feca3b0908c7313c8aefc2dbfd05.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    },
+    {
+      "source": "video/f0e0ce5deb0fa32a306331b97c170463.jpg",
+      "target": "assets/_archive/video-f0e0ce5deb0fa32a306331b97c170463.jpg",
+      "describes": "Decorative / duplicate - not used",
+      "confidence": "reviewed",
+      "used_by_site": false,
+      "needs_review": false,
+      "note": "Inspected in the browser. These are Canva's per-element sprite exports and near-duplicate crops: repeated angel-wing, halo, piano-key-ring, envelope, arrow, 'TM' badge and social-logo variants, alternate photo crops, Insight Timer cards, and video poster frames. Archived verbatim; nothing references them."
+    }
+  ]
+}
